@@ -11,26 +11,5 @@ import java.util.Map;
 public class FormHandler implements RouteHandler {
     public void handle(MuRequest request, MuResponse response, Map<String, String> pathParams) throws IOException {
 
-        // Returns null if there is no parameter with that value
-//        String something = request.form().get("something");
-
-        // Specifying a default value:
-//        String somethingElse = request.form().get("something", "default value");
-
-        // Gets a number, or returns the default value if it's missing or not a number.
-        // There are also getFloat, getDouble, getLong and getBoolean methods
-        int intValue = request.form().getInt("id", 42);
-
-//        boolean checkboxValue = request.form().getBoolean("checkboxValue");
-
-//        response.sendChunk(something + "\n" + somethingElse + "\n" + intValue + "\n" + checkboxValue);
-
-        response.sendChunk(""+intValue );
-
-        // You can loop through all the form data
-//        response.sendChunk("\n\nLooping through all form values:");
-//        for (Map.Entry<String, List<String>> entry : request.form().all().entrySet()) {
-//            response.sendChunk('\n' + entry.getKey() + "=" + entry.getValue());
-//        }
     }
 }
